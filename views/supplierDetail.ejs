@@ -1,0 +1,91 @@
+<% include ./header %>
+
+<header class="intro-header" style="background-image: url('/images/post-bg.jpg')">
+       <div class="container">
+           <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                 <div class="site-heading">
+                     <h1>Edit Supplier</h1>
+                 </div>
+             </div>
+           </div>
+       </div>
+   </header>
+
+   <!-- Post Content -->
+   <div class="container">
+   <div class="col-lg-12">
+       <h2>Supplier</h2>
+       <div class="table-responsive">
+           <table class="table table-bordered table-hover table-striped">
+               <thead>
+                 <tr>
+                   <th>Name</th>
+                   <th>Phone</th>
+                   <th>Email</th>
+                   <th>Address</th>
+
+                 </tr>
+               </thead>
+
+               <tbody>
+                   <tr>
+                       <td> <%= supplier.supplier_name %></td>
+                       <td> <%= supplier.supplier_phone %></td>
+                       <td> <%= supplier.supplier_email %></td>
+                       <td> <%= supplier.supplier_address %></td>
+
+                   </tr>
+               </tbody>
+           </table>
+
+       </div>
+       <div class="row">
+           <div class="form-group col-xs-12">
+               <button type="submit" class="btn btn-danger">Delete</button>
+           </div>
+       </div>
+   </div>
+   </div>
+
+   <div class="container">
+   <div class="col-lg-12">
+     <form name="sentMessage" action="/supplier" method="POST" id="contactForm" novalidate>
+       <div class="table-responsive">
+           <table class="table table-bordered table-hover table-striped">
+             <thead>
+               <tr>
+                 <th>Name</th>
+                 <th>Phone</th>
+                 <th>Email</th>
+                 <th>Address</th>
+               </tr>
+             </thead>
+               <tbody>
+                   <tr>
+                      <td><input type="text" class="form-control" placeholder="Name" id="name" name="name" required data-validation-required-message="Please enter your name.">
+                          </td>
+                      <td><input type="text" class="form-control" placeholder="Phone" id="phone" name="phone"  required data-validation-required-message="Please enter your phone.">
+                          </td>
+                      <td><input type="text" class="form-control" placeholder="Email" id="email" name="email" required data-validation-required-message="Please enter your email.">
+                          </td>
+                      <td><input type="text" class="form-control" placeholder="Address" id="address" name="address" required data-validation-required-message="Please enter your address.">
+                          </td>
+                   </tr>
+
+               </tbody>
+           </table>
+       </div>
+       <div id="success"></div>
+       <div class="row">
+           <div class="form-group col-xs-12">
+               <button type="submit" class="btn btn-default">Edit</button>
+           </div>
+       </div>
+   </form>
+   </div>
+   </div>
+
+
+   <hr>
+<% include ./footer %>

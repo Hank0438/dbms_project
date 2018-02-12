@@ -1,0 +1,95 @@
+<% include ./header %>
+ <!-- Page Header -->
+ <!-- Set your background image for this header on the line below. -->
+ <header class="intro-header" style="background-image: url('./images/night.jpg')">
+     <div class="container">
+         <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                 <div class="site-heading">
+                     <h1>Customer Tracking System</h1>
+                     <hr class="small">
+                     <span class="subheading">The 15th group</span>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </header>
+
+ <!-- Main Content -->
+ <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Services</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-cogs fa-2x" aria-hidden="true"></i>
+                            </span>
+                                <h4>
+                                    <strong><% if(member) {%>
+                                      <a href="/material/search" >Material
+                                    </a>
+                                  <% } %></strong>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-bolt fa-2x" aria-hidden="true"></i>
+                            </span>
+                                <h4>
+                                  <strong>
+                                    <a href="/battery/search" >Battery
+                                  </a>
+
+                                </strong>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-users  fa-2x" aria-hidden="true"></i>
+                            </span>
+                                <h4>
+                                    <strong><% if(member) {%>
+                                      <a href="/dealer/search" >Dealer
+                                    </a>
+                                  <% } %>
+                                </strong>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-male fa-2x" aria-hidden="true"></i>
+                            </span>
+                                <h4>
+                                    <strong><% if(member) {%>
+                                      <a href="/supplier/search" >Supplier
+                                    </a>
+                                    <% } %>
+                                  </strong>
+
+
+                                </h4>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+
+
+
+
+ <hr>
+ <% include ./footer %>
